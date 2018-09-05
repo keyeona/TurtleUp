@@ -19,7 +19,7 @@
     <string name="fact_pet_rating_label">Pet Rating</string>
     <string name="fact_scientitfic_name_label">Scientific Name</string>
     <string name="fact_fact_label">Fact</string>
-    <string name="fact_motivational_benefit_label">Motivation Benefit</string>
+    <string name="fact_application_label">Motivation Benefit</string>
 
     <!--Mock Facts for view-->
     <string name="mock_name">What are turtles?</string>
