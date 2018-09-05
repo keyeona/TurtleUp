@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Turtle Up</string>
+
+    <!--Welcome Message Main Fragment-->
+    <string name="welcome_message">Moti Here! Below you will find surprising turtle facts, and motivational text. Don\'t forget to save your favorite facts!</string>
+
+    <!--Main Fragment Buttons-->
+    <string name="turtle_fact_button">Turtle Facts</string>
+    <string name="favorite_turtle_button">Favorites Turtle Fact</string>
+    <string name="moti_talks_button">Moti Phrases</string>
+    <string name="widget_instructions">Widget Instructions</string>
+    <string name="credits_button">Credit</string>
+
+    <!--Fact Fragment Labels-->
+    <string name="fact_topic_label">Topic</string>
+    <string name="fact_type_label">Types</string>
+    <string name="fact_location_label">Location</string>
+    <string name="fact_diet_label">Diet</string>
+    <string name="fact_pet_rating_label">Pet Rating</string>
+    <string name="fact_scientitfic_name_label">Scientific Name</string>
+    <string name="fact_fact_label">Fact</string>
+    <string name="fact_motivational_benefit_label">Motivation Benefit</string>
+
+    <!--Mock Facts for view-->
+    <string name="mock_name">What are turtles?</string>
+    <string name="mock_type">General</string>
+    <string name="mock_image">https://www.goodfreephotos.com/albums/animals/reptiles-and-amphibians/small-green-turtle-on-rock.jpg</string>
+    <string name="mock_fact">The term turtle includes tortoises (terrestrial) and sea turtles (aquatic). Turtles belong to the oldest reptile groups, and fossils have been found that date back to the age of the dinosaurs</string>
+    <string name="mock_locations">South America</string>
+    <string name="mock_diet">Omnivore</string>
+    <string name="mock_pet_rating">9.5</string>
+    <string name="mock_scientific_name">imaginativeterrium</string>
+    <string name="mock_application">It\'s fun to use you imagination</string>
+    <string name="mock_land_sea">landlover</string>
+    
+
+
+
+</resources>

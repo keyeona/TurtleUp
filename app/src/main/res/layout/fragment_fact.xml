@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fact_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/moti_transparent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fact_type_label"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="424dp" />
+
+        <TextView
+            android:id="@+id/fact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mock_name"
+            tools:layout_editor_absoluteX="139dp"
+            tools:layout_editor_absoluteY="200dp" />
+
+        <TextView
+            android:id="@+id/fact_diet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mock_diet"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="238dp" />
+
+        <TextView
+            android:id="@+id/fact_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mock_locations"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="219dp" />
+
+        <TextView
+            android:id="@+id/fact_pet_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mock_pet_rating"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="276dp" />
+
+        <TextView
+            android:id="@+id/fact_fact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mock_fact"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="302dp" />
+
+        <TextView
+            android:id="@+id/fact_application"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mock_application"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
