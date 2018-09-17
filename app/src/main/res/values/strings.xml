@@ -4,12 +4,12 @@
     <!--Welcome Message Main Fragment-->
     <string name="welcome_message">Moti Here! Below you will find surprising turtle facts, and motivational text. Don\'t forget to save your favorite facts!</string>
 
-    <!--Main Fragment Buttons-->
-    <string name="turtle_fact_button">Turtle Facts</string>
-    <string name="favorite_turtle_button">Favorites Turtle Fact</string>
-    <string name="moti_talks_button">Moti Phrases</string>
-    <string name="widget_instructions">Widget Instructions</string>
-    <string name="credits_button">Credit</string>
+    <!--Main Fragment Buttons Text-->
+    <string name="turtle_fact_button_text">Turtle Facts</string>
+    <string name="main_favorite_turtle_button_text">Favorites Turtle Fact</string>
+    <string name="moti_talks_button_text">Moti Phrases</string>
+    <string name="widget_instructions_button">Widget Instructions</string>
+    <string name="credits_button_text">Credit</string>
 
     <!--Fact Fragment Labels-->
     <string name="fact_topic_label">Topic</string>
@@ -17,11 +17,11 @@
     <string name="fact_location_label">Location</string>
     <string name="fact_diet_label">Diet</string>
     <string name="fact_pet_rating_label">Pet Rating</string>
-    <string name="fact_scientitfic_name_label">Scientific Name</string>
+    <string name="fact_scientific_name_label">Scientific Name</string>
     <string name="fact_fact_label">Fact</string>
     <string name="fact_application_label">Motivation Benefit</string>
 
-    <!--Mock Facts for view-->
+    <!--Mock Facts for  Fact view-->
     <string name="mock_name">What are turtles?</string>
     <string name="mock_type">General</string>
     <string name="mock_image">https://www.goodfreephotos.com/albums/animals/reptiles-and-amphibians/small-green-turtle-on-rock.jpg</string>
@@ -32,8 +32,42 @@
     <string name="mock_scientific_name">imaginativeterrium</string>
     <string name="mock_application">It\'s fun to use you imagination</string>
     <string name="mock_land_sea">landlover</string>
-    
 
+    <!--Mock Motivational for Moti talk view-->
+    <string name="motivational_title_label">Turtle Motivation</string>
+    <string name="motivational_source_tect">Precise determination</string>
+
+    <!--Widget Instructions-->
+    <string name="instructions_step_longpress">To set up the widget on your home screen. Long hold on an empty space</string>
+    <string name="instructions_select_widgets">Select Widgets</string>
+    <string name="instructions_scroll_and_select_widget">Search for Daily Moti sayings</string>
+    <string name="instructions_select_and_resize">Select the Daily Moti Widget and drop it onto you homescreen and resize as desired.</string>
+
+    <!--Favorites Fragment-->
+    <string name="favorites_title_label">Turtle Fact favorites</string>
+
+    <!--Row-->
+    <string name="row_title_string">Turtles are amazing</string>
+    <string name="row_descritpion_string">Learn when taking it slow comes in handy</string>
+
+    <!--Widget Instructions Fragment-->
+    <string name="widget_title_label">Using the motivational Widget</string>
+    <string name="widget_instructions">Sample step</string>
+
+    <!--Credits -->
+    <string name="credits_title_label">Turtle Fact Credits</string>
+    <string name="color_style_credit">To be Determined</string>
+    <string name="informations_credits">To be Determined</string>
+    <string-array name="information_credit_planets">aa
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </string-array>
+
+
+    <!--Add to favorites -->
+    <string name="add_to_favorites_buttons">Add to favorites button</string>
 
 
 </resources>
