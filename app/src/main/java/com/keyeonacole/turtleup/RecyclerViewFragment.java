@@ -40,7 +40,8 @@ public class RecyclerViewFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_recycler_view, container, false);
-        FirebaseApp.initializeApp(getActivity());
+        //TODO: Do I initalize here
+        FirebaseApp.initializeApp(getActivity().getApplicationContext());
         ButterKnife.bind(this,rootView);
         myBundle = this.getArguments();
         getButtonId(myBundle);

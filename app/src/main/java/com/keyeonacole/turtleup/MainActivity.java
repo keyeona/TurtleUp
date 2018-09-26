@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
+
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity{
@@ -14,8 +16,8 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
+        //TODO: Do I initalize here?
+        FirebaseApp.initializeApp(this);
         MainFragment mainFragment = null;
          try {
             mainFragment = new MainFragment();
