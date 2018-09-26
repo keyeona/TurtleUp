@@ -11,6 +11,10 @@
     <string name="widget_instructions_button">Widget Instructions</string>
     <string name="credits_button_text">Credit</string>
 
+    <string name="bundle_button_id_label">button_id</string>
+
+    <string name="facts_string_id">facts</string>
+
     <!--Fact Fragment Labels-->
     <string name="fact_topic_label">Topic</string>
     <string name="fact_type_label">Types</string>
@@ -58,16 +62,21 @@
     <string name="credits_title_label">Turtle Fact Credits</string>
     <string name="color_style_credit">To be Determined</string>
     <string name="informations_credits">To be Determined</string>
-    <string-array name="information_credit_planets">aa
+    <string-array name="information_credit_planets">
         <item>Mercury</item>
         <item>Venus</item>
         <item>Earth</item>
         <item>Mars</item>
     </string-array>
 
-
     <!--Add to favorites -->
     <string name="add_to_favorites_buttons">Add to favorites button</string>
+
+    <!--Realtime DB values -->
+    <string name="turtle_facts_from_db">turtles</string>
+    <string name="credits_from_db">credits</string>
+    <string name="tag_message">Value is:</string>
+    <string name="failed_to_read">Failed to read:</string>
 
 
 </resources>

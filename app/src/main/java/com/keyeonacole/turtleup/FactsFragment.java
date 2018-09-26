@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.IOException;
 
 public class FactsFragment extends Fragment {
@@ -22,4 +25,6 @@ public class FactsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_fact, container, false);
         return rootView;
     }
+
+
 }
