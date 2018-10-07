@@ -74,9 +74,25 @@
 
     <!--Realtime DB values -->
     <string name="turtle_facts_from_db">turtles</string>
+    <string name="imageQuery">image</string>
+    <string name="petRatingQuery">pet_rating</string>
+    <string name="factQuery">fact</string>
+    <string name="dietQuery">Diet</string>
+    <string name="locationsQuery">locations</string>
+    <string name="scientificNameQuery">scientific_name</string>
+    <string name="idQuery">id</string>
+    <string name="typeQuery">type</string>
+    <string name="landOrSeaQuery">land_or_sea</string>
+    <string name="nameQuery">Name</string>
+    <string name="applicationQuery">application</string>
+
+
+
     <string name="credits_from_db">credits</string>
     <string name="tag_message">Value is:</string>
     <string name="failed_to_read">Failed to read:</string>
+
+    <string name="scroll_state">scrollState</string>
 
 
 </resources>
