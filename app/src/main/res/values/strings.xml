@@ -93,6 +93,7 @@
     <string name="failed_to_read">Failed to read:</string>
 
     <string name="scroll_state">scrollState</string>
+    <string name="n_a">N/A</string>
 
 
 </resources>
