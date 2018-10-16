@@ -1,18 +1,34 @@
 package com.keyeonacole.turtleup;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
 import java.util.ArrayList;
 
+@Entity
 public class Fact {
+    @ColumnInfo(name = "name")
     private String title;
+    @ColumnInfo(name = "type")
     private String type;
+    @ColumnInfo(name = "imageLink")
     private String imageLink;
+    @ColumnInfo(name = "theFact")
     private String fact;
+    @ColumnInfo(name = "locations")
     private ArrayList<String> locations;
+    @ColumnInfo(name = "diet")
     private String diet;
+    @ColumnInfo(name = "petRating")
     private String petRating;
+    @ColumnInfo(name = "scientificName")
     private String scientificName;
+    @ColumnInfo(name = "landOrSea")
     private String landOrSea;
+    @PrimaryKey
     private String id;
+    @ColumnInfo(name = "application")
     private  String application;
 
 
