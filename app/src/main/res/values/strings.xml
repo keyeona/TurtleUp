@@ -57,7 +57,7 @@
 
     <!--Widget Instructions Fragment-->
     <string name="widget_title_label">Using the motivational Widget</string>
-    <string name="widget_instructions">Sample step</string>
+    <string name="widget_instructions">\n 1. From the home screen touch and hold to bring up the menu \n 2. Click on Widgets \n 3. Scroll down until you find the TurtleUp Widget.\n Drag and drop it to add it to you home screen \n You can add multiple widgets for different saying! \n Don\'t forget to resize the widget</string>
 
     <!--Credits -->
     <string name="credits_title_label">Turtle Fact Credits</string>
@@ -89,7 +89,6 @@
     <string name="applicationQuery">application</string>
 
 
-
     <string name="credits_from_db">credits</string>
     <string name="tag_message">Value is:</string>
     <string name="failed_to_read">Failed to read:</string>
@@ -98,6 +97,13 @@
     <string name="n_a">N/A</string>
 
     <string name="database">database_favorites</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+
+    <!--Credit -->
+    <string name="credit_list"> This project was executed initally by Keyeona Cole but was completed with the help of many! Thank You Udacity, and the udacity mentors who proved to be an amazing resource!. Thank you classmates and FAM cohort for being a valuabe team. Honored to be apart of this team with you. Thank you to the AND team that patiently answered questions and shared a treasure trove of information. Thank you Britannica for the wonderful turtle facts!  </string>
+
 
 
 </resources>
