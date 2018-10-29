@@ -3,6 +3,7 @@ package com.keyeonacole.turtleup;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public class Fact {
     private String scientificName;
     @ColumnInfo(name = "landOrSea")
     private String landOrSea;
-    @PrimaryKey
+    @PrimaryKey @NonNull
     private String id;
     @ColumnInfo(name = "application")
     private  String application;

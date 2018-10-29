@@ -17,19 +17,18 @@
             android:id="@+id/fact_imageView"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:scaleType="fitXY"
             android:src="@drawable/moti_transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:padding="8dp"
-            android:scaleType="fitXY"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/fact_name" />
 
         <TextView
             android:id="@+id/fact_type_label"
@@ -59,18 +58,16 @@
             android:id="@+id/fact_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
             android:text="@string/mock_name"
-            app:layout_constraintBottom_toTopOf="@+id/fact_imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:padding="8dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/addToFavoritesBTN" />
 
         <TextView
             android:id="@+id/fact_diet_label"
@@ -223,11 +220,27 @@
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/addToFavoritesBTN"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:padding="8dp"
-            android:text="@string/add_to_favorites_buttons" />
+            android:text="@string/add_to_favorites_buttons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/removeFromFavoritesBTN"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:text="@string/remove_from_favorites_buttons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </android.support.constraint.ConstraintLayout>

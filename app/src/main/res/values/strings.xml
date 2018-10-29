@@ -14,6 +14,7 @@
     <string name="bundle_button_id_label">button_id</string>
 
     <string name="facts_string_id">facts</string>
+    <string name="favorites_string_id">favorites</string>
 
     <!--Fact Fragment Labels-->
     <string name="fact_topic_label">Topic</string>
@@ -62,15 +63,16 @@
     <string name="credits_title_label">Turtle Fact Credits</string>
     <string name="color_style_credit">To be Determined</string>
     <string name="informations_credits">To be Determined</string>
-    <string-array name="information_credit_planets">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-    </string-array>
+
 
     <!--Add to favorites -->
     <string name="add_to_favorites_buttons">Add to favorites button</string>
+    <string name="remove_from_favorites_buttons">Remove from favorites button</string>
+
+    <!--Add to favorites -->
+    <string name="add_to_message">Adding to favorites button</string>
+    <string name="remove_from_message">Removed from favorites button</string>
+
 
     <!--Realtime DB values -->
     <string name="turtle_facts_from_db">turtles</string>
@@ -94,6 +96,8 @@
 
     <string name="scroll_state">scrollState</string>
     <string name="n_a">N/A</string>
+
+    <string name="database">database_favorites</string>
 
 
 </resources>

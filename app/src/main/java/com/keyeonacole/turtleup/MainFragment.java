@@ -15,8 +15,10 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainFragment extends Fragment {
+
     @BindString(R.string.facts_string_id) String facts_string_id;
     @BindString(R.string.bundle_button_id_label) String bundle_button_label;
+    @BindString(R.string.favorites_string_id) String favorites_string_id;
     public static Bundle myBundle = null;
 
     public MainFragment() throws IOException {
@@ -52,10 +54,13 @@ public class MainFragment extends Fragment {
 
     @OnClick(R.id.favorite_turtle_btn)
     public void Favorites() {
+        myBundle = new Bundle();
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         try {
-            FavoritesFragment favoritesFragment = new FavoritesFragment();
-            ft.replace(R.id.fragmentContainerMain, favoritesFragment);
+            RecyclerViewFragment recyclerViewFragment = new RecyclerViewFragment();
+            myBundle.putString(bundle_button_label,favorites_string_id);
+            recyclerViewFragment.setArguments(myBundle);
+            ft.replace(R.id.fragmentContainerMain, recyclerViewFragment);
             ft.addToBackStack(null);
             ft.commit();
         } catch (IOException e) {

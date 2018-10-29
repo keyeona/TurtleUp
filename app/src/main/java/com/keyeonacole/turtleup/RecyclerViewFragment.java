@@ -1,5 +1,8 @@
 package com.keyeonacole.turtleup;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.Observer;
+import android.arch.persistence.room.Room;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
@@ -12,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -65,6 +69,8 @@ public class RecyclerViewFragment extends Fragment {
     String applicationQuery;
     @BindString(R.string.scroll_state)
     String scrollState;
+    @BindString(R.string.database)
+    String database_name;
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
@@ -120,7 +126,16 @@ public class RecyclerViewFragment extends Fragment {
     }
 
     private void GetFavoritesID() {
-        //TODO: Dont forget I am here
+        final AppDatabase db = Room.databaseBuilder(getContext(),
+                AppDatabase.class, database_name).build();
+        LiveData<List<Fact>> favoriteFacts = (LiveData<List<Fact>>) db.factDao().getFavorites();
+        favoriteFacts.observe(getActivity(), new Observer<List<Fact>>() {
+            @Override
+            public void onChanged(@Nullable List<Fact> facts) {
+                populateRV(facts);
+
+            }
+        });
     }
 
 

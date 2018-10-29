@@ -1,5 +1,7 @@
 package com.keyeonacole.turtleup;
 
+import android.arch.persistence.room.Room;
+import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.squareup.picasso.Picasso;
@@ -46,6 +49,12 @@ public class FactsFragment extends Fragment {
     String applicationQuery;
     @BindString(R.string.n_a)
     String na;
+    @BindString(R.string.database)
+    String database_name;
+    @BindString(R.string.add_to_message)
+    String add_message;
+    @BindString(R.string.remove_from_message)
+    String remove_message;
 
     @BindView(R.id.fact_imageView)
     ImageView image;
@@ -104,7 +113,6 @@ public class FactsFragment extends Fragment {
 
         }
 
-        Log.d("DataBase", fact);
 
         if(fact.isEmpty()){
             factTextView.setText(na);
@@ -153,8 +161,61 @@ public class FactsFragment extends Fragment {
 
     @OnClick(R.id.addToFavoritesBTN)
     public void addtoFavorites(){
+        Toast.makeText(getContext(), add_message, Toast.LENGTH_SHORT).show();
 
+        final AppDatabase db = Room.databaseBuilder(getContext(),
+                AppDatabase.class, database_name).build();
+        new AddAsync().execute();
 
+    }
+
+    @OnClick(R.id.removeFromFavoritesBTN)
+    public void removeFromFavorites(){
+        Toast.makeText(getContext(), remove_message, Toast.LENGTH_SHORT).show();
+
+        final AppDatabase db = Room.databaseBuilder(getContext(),
+                AppDatabase.class, database_name).build();
+        new RemoveAsync().execute();
+
+    }
+
+    private Fact bundleToFact(Bundle bundle){
+        title = bundle.getString(nameQuery);
+        type = bundle.getString(typeQuery);
+        imageLink = bundle.getString(imageQuery);
+        fact = bundle.getString(factQuery);
+        locations = bundle.getStringArrayList(locationsQuery);
+        diet = bundle.getString(dietQuery);
+        petRating = bundle.getString(petRatingQuery);
+        scientificName = bundle.getString(scientificNameQuery);
+        landOrSea = bundle.getString(landOrSeaQuery);
+        id = bundle.getString(idQuery);
+        application = bundle.getString(applicationQuery);
+
+        Fact newFact = new Fact(title, type, imageLink, fact, locations, diet, petRating,
+                scientificName, landOrSea, application, id);
+
+     return newFact;
+    }
+
+    public class AddAsync extends AsyncTask{
+        final AppDatabase db = Room.databaseBuilder(getActivity().getApplicationContext(),
+                AppDatabase.class, database_name).build();
+        @Override
+        protected Object doInBackground(Object[] objects) {
+            db.factDao().insertSingleFact(bundleToFact(getArguments()));
+            return null;
+        }
+    }
+
+    public class RemoveAsync extends AsyncTask{
+        final AppDatabase db = Room.databaseBuilder(getActivity().getApplicationContext(),
+                AppDatabase.class, database_name).build();
+        @Override
+        protected Object doInBackground(Object[] objects) {
+            db.factDao().delete(bundleToFact(getArguments()));
+            return null;
+        }
     }
 
 
