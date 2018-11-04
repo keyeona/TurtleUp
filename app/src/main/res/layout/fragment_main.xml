@@ -27,7 +27,8 @@
                 android:layout_height="80dp"
                 android:padding="8dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/moti_transparent" />
+                android:src="@drawable/moti_transparent"
+                android:contentDescription="" />
 
             <TextView
                 android:id="@+id/welcome_tv"

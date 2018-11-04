@@ -99,8 +99,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
             ItemClickListener itemClickListener = new ItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
-                    //TODO: Dont forget I am here
-                    Log.d("DataBase", String.valueOf(position));
                     Bundle factBundle = passBundle(factList.get(position));
                     android.support.v4.app.FragmentManager manager = ((FragmentActivity)context).getSupportFragmentManager() ;
                     FragmentTransaction ft = manager.beginTransaction();

@@ -158,7 +158,6 @@ public class RecyclerViewFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError error) {
-                //TODO: Dont forget I am here
                 Log.d("DataBase", failedToRead, error.toException());
             }
         });

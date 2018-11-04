@@ -49,7 +49,8 @@
             android:src="@drawable/moti_transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/motivation_text_contents" />
+            app:layout_constraintTop_toBottomOf="@+id/motivation_text_contents"
+            android:contentDescription="@string/content_description_moti" />
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>

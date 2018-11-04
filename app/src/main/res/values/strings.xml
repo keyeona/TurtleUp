@@ -104,6 +104,10 @@
     <!--Credit -->
     <string name="credit_list"> This project was executed initally by Keyeona Cole but was completed with the help of many! Thank You Udacity, and the udacity mentors who proved to be an amazing resource!. Thank you classmates and FAM cohort for being a valuabe team. Honored to be apart of this team with you. Thank you to the AND team that patiently answered questions and shared a treasure trove of information. Thank you Britannica for the wonderful turtle facts!  </string>
 
+    <string name="name_content_description_row_image">Turtle related imaged</string>
+    <string name="content_description_moti">Moti the turtle Image</string>
+
+    <string name="no_favorities">No Favorite facts to share open the app and save a fact as favorite.</string>
 
 
 </resources>

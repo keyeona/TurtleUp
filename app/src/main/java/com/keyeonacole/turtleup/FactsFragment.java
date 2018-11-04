@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 import butterknife.BindString;
@@ -80,6 +81,8 @@ public class FactsFragment extends Fragment {
     String landOrSea;
     String id;
     String application;
+
+    static AddAsync addAsync;
 
     @Nullable
     @Override
@@ -198,8 +201,8 @@ public class FactsFragment extends Fragment {
      return newFact;
     }
 
-    public class AddAsync extends AsyncTask{
-        final AppDatabase db = Room.databaseBuilder(getActivity().getApplicationContext(),
+    protected  class AddAsync extends AsyncTask{
+         final AppDatabase db = Room.databaseBuilder(getActivity().getApplicationContext(),
                 AppDatabase.class, database_name).build();
         @Override
         protected Object doInBackground(Object[] objects) {
@@ -208,7 +211,9 @@ public class FactsFragment extends Fragment {
         }
     }
 
-    public class RemoveAsync extends AsyncTask{
+
+    private  class RemoveAsync extends AsyncTask{
+
         final AppDatabase db = Room.databaseBuilder(getActivity().getApplicationContext(),
                 AppDatabase.class, database_name).build();
         @Override
@@ -217,6 +222,5 @@ public class FactsFragment extends Fragment {
             return null;
         }
     }
-
 
 }
