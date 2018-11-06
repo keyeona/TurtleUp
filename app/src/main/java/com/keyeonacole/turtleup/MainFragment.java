@@ -8,6 +8,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.gms.ads.MobileAds;
+
 import java.io.IOException;
 
 import butterknife.BindString;
@@ -16,6 +19,7 @@ import butterknife.OnClick;
 
 public class MainFragment extends Fragment {
 
+    @BindString(R.string.ad_mob_id) String adMod_id;
     @BindString(R.string.facts_string_id) String facts_string_id;
     @BindString(R.string.bundle_button_id_label) String bundle_button_label;
     @BindString(R.string.favorites_string_id) String favorites_string_id;
@@ -32,6 +36,8 @@ public class MainFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         ButterKnife.bind(this, rootView);
+        MobileAds.initialize(getContext(), adMod_id);
+
         return rootView;
     }
 

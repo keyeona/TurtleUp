@@ -6,15 +6,20 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.FirebaseApp;
 
 import java.io.IOException;
+
+import butterknife.BindString;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ButterKnife.bind(this);
         setContentView(R.layout.activity_main);
         MainFragment mainFragment = null;
          try {

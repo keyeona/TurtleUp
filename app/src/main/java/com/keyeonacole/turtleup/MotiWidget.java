@@ -1,6 +1,7 @@
 package com.keyeonacole.turtleup;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.arch.lifecycle.LifecycleOwner;
@@ -10,10 +11,12 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 import com.example.my_app.moti.Phrases;
 
@@ -31,31 +34,46 @@ public class MotiWidget extends AppWidgetProvider {
 
     static void updateAppWidget(final Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
-        final CharSequence widgetText = context.getString(R.string.appwidget_text);
         // Construct the RemoteViews object
         final RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.moti_widget);
         Phrases phrases = new Phrases();
 
-        String datbaseName = context.getString(R.string.database);
+        Intent intent = new Intent(context, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+
+        final String datbaseName = context.getString(R.string.database);
         final AppDatabase db = Room.databaseBuilder((context),
                 AppDatabase.class, datbaseName).build();
-        LiveData<List<Fact>> factLiveData = db.factDao().getFavorites();
+        LiveData<List<Fact>> factLiveData = null;
+        factLiveData = db.factDao().getFavorites();
         factLiveData.observeForever(new Observer<List<Fact>>() {
             @Override
             public void onChanged(@Nullable List<Fact> facts) {
                 int count = facts.size();
                 Random r = new Random();
-                int i1 = r.nextInt(count - 0);
-                Fact  randomfact = facts.get(i1);
-                String widgetFact = randomfact.getFact();
+                Toast.makeText(context, datbaseName, Toast.LENGTH_SHORT).show();
                 if(count == 0){
                     String no_favs = context.getString(R.string.no_favorities);
                     views.setTextViewText(R.id.appwidget_text, no_favs);
                 }else {
+                    int i1 = r.nextInt(count - 0);
+                    Fact  randomfact = facts.get(i1);
+                    String widgetFact = randomfact.getFact();
                     views.setTextViewText(R.id.appwidget_text, widgetFact);
                 }
             }
         });
+
+        List<Fact> factList = factLiveData.getValue();
+        //Fact testFact = factList.get(0);
+        //String string = testFact.getFact();
+        int phraseCount = phrases.getPhraseCounts();
+        Random r = new Random();
+        int i2 = r.nextInt(phraseCount - 0);
+        String string = phrases.getPhrase(i2);
+        views.setOnClickPendingIntent(R.id.appwidget_text, pendingIntent);
+        views.setTextViewText(R.id.appwidget_text, string);
+
 
 
         // Instruct the widget manager to update the widget
