@@ -37,11 +37,11 @@ public class PhraseFragment extends Fragment{
     }
 
     private void getPhrase() {
-        Phrases phrases = new Phrases();
-        int count = phrases.getPhraseCounts();
+        LocalPharases phrases = new LocalPharases();
+        int count = phrases.getPhraseCounts(getContext());
         Random r = new Random();
         int i1 = r.nextInt(count - 0);
-        String randomPhrase = phrases.getPhrase(i1);
+        String randomPhrase = phrases.getPhrase(i1, getContext());
         motivationTV.setText(randomPhrase);
     }
 }

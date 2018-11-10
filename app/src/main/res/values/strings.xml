@@ -111,4 +111,24 @@
     <string name="ad_mob_id">ca-app-pub-4459165054544600~9377354548</string>
 
 
+    <!--Main Fragment Buttons Text-->
+    <string name="local_phrase_1">You can do it!!!!!!</string>
+    <string name="local_phrase_2">Hey! You\'re doing great!</string>
+    <string name="local_phrase_3">Every failure is a success, you\'ve learned something new</string>
+    <string name="local_phrase_4">Don\'t worry even I mke mstcakes</string>
+    <string name="local_phrase_5">I woke up on the wrong side of the bed, sooo I went back to bed and tried it again</string>
+    <string name="local_phrase_6">I\’ve just written a song about tortillas; actually, it\’s more of a rap.</string>
+    <string name="local_phrase_7">You know what I just found perfection! It\'s in the dictionary, so far that the only place I\'ve seen it</string>
+    <string name="local_phrase_8">I recently decided to sell my vacuum cleaner as all it was doing was gathering dust.</string>
+    <string name="local_phrase_9">Chooo Choooo just slowly chigging a long</string>
+    <string name="local_phrase_10">Let\'s take a moment to reflect on something wonderful today!</string>
+    <string name="local_phrase_11">The best thing about today is you!</string>
+    <string name="local_phrase_12">Yeah, hugs are nice. I could really go for a hug right now. C\'mon bring it in..</string>
+    <string name="local_phrase_13">You know what 0 + 0 is? Well I can tell you it the number of time you need to harshly criticize your work.</string>
+    <string name="local_phrase_14">How\'s it going? Just wanted to say that I think you are doing good! Can\'t wait to see what\'s next.</string>
+    <string name="local_phrase_15">Don\'t stop believing …ooooo o o</string>
+    <string name="local_phrase_16">Thanks for being a great person!</string>
+    <string name="local_phrase_17">Weeeeee! When life gives you rollercoasters I just enjoy the ride!!</string>
+
+
 </resources>

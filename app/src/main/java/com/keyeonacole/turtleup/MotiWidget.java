@@ -10,10 +10,9 @@ import android.arch.lifecycle.Observer;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
-import android.content.ContextWrapper;
+
 import android.content.Intent;
-import android.content.res.Resources;
-import android.os.AsyncTask;
+
 import android.support.annotation.Nullable;
 import android.widget.RemoteViews;
 import android.widget.Toast;
@@ -23,8 +22,7 @@ import com.example.my_app.moti.Phrases;
 import java.util.List;
 import java.util.Random;
 
-import butterknife.BindString;
-import butterknife.ButterKnife;
+
 
 /**
  * Implementation of App Widget functionality.
@@ -36,7 +34,7 @@ public class MotiWidget extends AppWidgetProvider {
                                 int appWidgetId) {
         // Construct the RemoteViews object
         final RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.moti_widget);
-        Phrases phrases = new Phrases();
+        LocalPharases phrases = new LocalPharases();
 
         Intent intent = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
@@ -67,10 +65,10 @@ public class MotiWidget extends AppWidgetProvider {
         List<Fact> factList = factLiveData.getValue();
         //Fact testFact = factList.get(0);
         //String string = testFact.getFact();
-        int phraseCount = phrases.getPhraseCounts();
+        int phraseCount = phrases.getPhraseCounts(context);
         Random r = new Random();
         int i2 = r.nextInt(phraseCount - 0);
-        String string = phrases.getPhrase(i2);
+        String string = phrases.getPhrase(i2, context);
         views.setOnClickPendingIntent(R.id.appwidget_text, pendingIntent);
         views.setTextViewText(R.id.appwidget_text, string);
 
