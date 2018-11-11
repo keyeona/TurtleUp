@@ -10,16 +10,28 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
+
+    signingConfigs {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // You need to specify either an absolute path or include the
+            // keystore file in the same directory as the build.gradle file.
+            storeFile file('/Users/keyeona_cole/code/AND/TurtleUp/turtleStore')
+            storePassword "turtle"
+            keyAlias "mainKey"
+            keyPassword "mainKey"
+        }
+        buildTypes {
+            release {
+                minifyEnabled false
+                signingConfig signingConfigs.release
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
         }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
@@ -38,7 +50,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'android.arch.lifecycle:livedata:1.1.1'
     implementation 'com.google.firebase:firebase-ads:17.0.0'
-    implementation project(":Moti")
-
-
+    implementation project(':Moti')
 }

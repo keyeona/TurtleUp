@@ -1,14 +1,11 @@
 package com.keyeonacole.turtleup;
 
-import android.app.Activity;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
-import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Observer;
 import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
 import android.content.Intent;
@@ -16,8 +13,6 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.widget.RemoteViews;
 import android.widget.Toast;
-
-import com.example.my_app.moti.Phrases;
 
 import java.util.List;
 import java.util.Random;

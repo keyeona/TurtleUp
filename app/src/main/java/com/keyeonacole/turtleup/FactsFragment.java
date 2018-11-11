@@ -1,7 +1,9 @@
 package com.keyeonacole.turtleup;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Room;
 import android.os.AsyncTask;
+import android.os.Looper;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -56,6 +58,8 @@ public class FactsFragment extends Fragment {
     String add_message;
     @BindString(R.string.remove_from_message)
     String remove_message;
+    @BindString(R.string.in_favorites)
+    String in_favorites;
 
     @BindView(R.id.fact_imageView)
     ImageView image;
@@ -206,10 +210,16 @@ public class FactsFragment extends Fragment {
                 AppDatabase.class, database_name).build();
         @Override
         protected Object doInBackground(Object[] objects) {
-            db.factDao().insertSingleFact(bundleToFact(getArguments()));
+            Fact fact = bundleToFact(getArguments());
+            String id = fact.getId();
+            if (db.factDao().loadAllByFavorites(id) == null){
+                db.factDao().insertSingleFact(bundleToFact(getArguments()));
+            }
             return null;
         }
     }
+
+
 
 
     private  class RemoveAsync extends AsyncTask{

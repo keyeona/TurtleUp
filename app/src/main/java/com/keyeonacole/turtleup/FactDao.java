@@ -23,7 +23,7 @@ public interface FactDao {
     @Delete
     void delete(Fact fact);
 
-    @Query("SELECT * FROM fact WHERE id LIKE :id")
-    LiveData<List<Fact>> loadAllByFavorites(int id);
+    @Query("SELECT id FROM fact WHERE id LIKE :id")
+    String loadAllByFavorites(String id);
 
 }

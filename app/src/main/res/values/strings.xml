@@ -110,6 +110,9 @@
     <string name="no_favorities">No Favorite facts to share open the app and save a fact as favorite.</string>
     <string name="ad_mob_id">ca-app-pub-4459165054544600~9377354548</string>
 
+    <string name="in_favorites">This fact is saved to you favorites.</string>
+
+
 
     <!--Main Fragment Buttons Text-->
     <string name="local_phrase_1">You can do it!!!!!!</string>
